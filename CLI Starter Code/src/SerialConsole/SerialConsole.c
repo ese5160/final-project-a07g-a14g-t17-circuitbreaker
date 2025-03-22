@@ -27,6 +27,8 @@
  * Includes
  ******************************************************************************/
 #include "SerialConsole.h"
+#include "FreeRTOS.h"
+#include "semphr.h"
 
 /******************************************************************************
  * Defines
@@ -54,6 +56,7 @@ void usart_read_callback(struct usart_module *const usart_module); // Callback f
  ******************************************************************************/
 static void configure_usart(void);
 static void configure_usart_callbacks(void);
+static SemaphoreHandle_t xRxSemaphore = NULL;
 
 /******************************************************************************
  * Global Variables
@@ -84,6 +87,8 @@ void InitializeSerialConsole(void)
     usart_read_buffer_job(&usart_instance, (uint8_t *)&latestRx, 1); // Kicks off constant reading of characters
 
 	// Add any other calls you need to do to initialize your Serial Console
+	// Create the binary semaphore for received characters.
+	xRxSemaphore = xSemaphoreCreateBinary();
 }
 
 /**
@@ -153,6 +158,26 @@ void LogMessage(enum eDebugLogLevels level, const char *format, ...)
 {
     // Todo: Implement Debug Logger
 	// More detailed descriptions are in header file
+	// Only log messages if the provided level is greater than or equal to the current debug level.
+	if (level < currentDebugLevel)
+	{
+		return;
+	}
+
+	char buffer[256];  // Buffer to store the formatted message (adjust size as needed)
+
+	// Initialize the variable argument list.
+	va_list args;
+	va_start(args, format);
+
+	// Format the string using vsprintf.
+	vsprintf(buffer, format, args);
+
+	// Clean up the variable argument list.
+	va_end(args);
+
+	// Write the formatted message to the UART using SerialConsoleWriteString.
+	SerialConsoleWriteString(buffer);
 }
 
 /*
@@ -220,7 +245,17 @@ static void configure_usart_callbacks(void)
  *****************************************************************************/
 void usart_read_callback(struct usart_module *const usart_module)
 {
-	// ToDo: Complete this function 
+	// ToDo: Complete this function
+    // Store the received character into the RX circular buffer.
+    circular_buf_put(cbufRx, latestRx);
+    
+    // Re-arm the UART read for the next character.
+    usart_read_buffer_job(&usart_instance, (uint8_t *)&latestRx, 1);
+    
+    // Notify any waiting task that a new character is available.
+    BaseType_t xHigherPriorityTaskWoken = pdFALSE;
+    xSemaphoreGiveFromISR(xRxSemaphore, &xHigherPriorityTaskWoken);
+    portYIELD_FROM_ISR(xHigherPriorityTaskWoken); 
 }
 
 /**************************************************************************/ 
@@ -235,4 +270,20 @@ void usart_write_callback(struct usart_module *const usart_module)
 	{
 		usart_write_buffer_job(&usart_instance, (uint8_t *)&latestTx, 1);
 	}
+}
+
+/**
+ * @brief Blocks until a character is available, then retrieves it from the RX circular buffer.
+ *
+ * @param rxChar Pointer to store the received character.
+ * @return int - Returns -1 if no character is retrieved (should not occur if waiting indefinitely), else the character.
+ */
+int SerialConsoleBlockingReadCharacter(uint8_t *rxChar)
+{
+    // Wait indefinitely until a character is available.
+    if (xSemaphoreTake(xRxSemaphore, portMAX_DELAY) == pdTRUE)
+    {
+        return circular_buf_get(cbufRx, rxChar);
+    }
+    return -1;
 }

@@ -92,7 +92,7 @@ int main(void)
  * function          StartTasks
  * @brief            Initialize application tasks in this function
  * @details
- * @param[in]        None
+ * @param[in]        None	
  * @return           None
  *****************************************************************************/
 static void StartTasks(void)

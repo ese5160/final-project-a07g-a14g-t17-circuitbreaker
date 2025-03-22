@@ -10,14 +10,18 @@
  * Includes
  ******************************************************************************/
 #include "CliThread.h"
+#include "SerialConsole/SerialConsole.h"
 
 /******************************************************************************
  * Defines
  ******************************************************************************/
 
+
 /******************************************************************************
  * Variables
  ******************************************************************************/
+extern int SerialConsoleBlockingReadCharacter(uint8_t *rxChar);
+
 static int8_t *const pcWelcomeMessage =
     "FreeRTOS CLI.\r\nType Help to view a list of registered commands.\r\n";
 
@@ -217,7 +221,12 @@ void vCommandConsoleTask(void *pvParameters)
 static void FreeRTOS_read(char *character)
 {
     // ToDo: Complete this function
-    vTaskSuspend(NULL); // We suspend ourselves. Please remove this when doing your code
+    uint8_t rx;
+    // Block until a character is available.
+    if (SerialConsoleBlockingReadCharacter(&rx) != -1)
+    {
+	    *character = (char)rx;
+    }
 }
 
 /******************************************************************************
