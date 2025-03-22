@@ -20,4 +20,5 @@
 * FREERTOS as RTOS
 # 01.2 Software Architecture(Task)
 ![image](https://github.com/user-attachments/assets/a3c7b6cc-9c70-4740-b462-a9390f0c0fd3)
+# 01.3 Software Architecture(State machine for Task)
 
