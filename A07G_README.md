@@ -19,7 +19,7 @@
 * data buffered in FIFO for ICM-42670-P
 * FREERTOS as RTOS
 # 01.2 Software Architecture(Task)
-![image](https://github.com/user-attachments/assets/a3c7b6cc-9c70-4740-b462-a9390f0c0fd3)
+![image](https://github.com/user-attachments/assets/1b12936f-92bb-4a88-a012-948c5a556bc9)
 # 01.3 Software Architecture(State machine for Task)
 
 # 4 Wiretap the convo!
