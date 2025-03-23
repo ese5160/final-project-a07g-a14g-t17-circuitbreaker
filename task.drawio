@@ -12,8 +12,10 @@
             <mxPoint x="-21" y="1" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="H3kN9WbzdMySnIGSTNFU-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="rRrChRX4YDQylmWt6hNa-1" target="rRrChRX4YDQylmWt6hNa-10">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="H3kN9WbzdMySnIGSTNFU-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="rRrChRX4YDQylmWt6hNa-1" target="rRrChRX4YDQylmWt6hNa-14">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="660" y="415" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="H3kN9WbzdMySnIGSTNFU-2" value="Fingerprint match info(only if match)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="H3kN9WbzdMySnIGSTNFU-1">
           <mxGeometry x="-0.2923" y="1" relative="1" as="geometry">
@@ -32,28 +34,6 @@
         <mxCell id="rRrChRX4YDQylmWt6hNa-5" value="Haptic Feedback Task" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="284" y="360" width="140" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="rRrChRX4YDQylmWt6hNa-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="rRrChRX4YDQylmWt6hNa-10" target="rRrChRX4YDQylmWt6hNa-4" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="rRrChRX4YDQylmWt6hNa-13" value="Button press info" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rRrChRX4YDQylmWt6hNa-12" vertex="1" connectable="0">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="rRrChRX4YDQylmWt6hNa-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="rRrChRX4YDQylmWt6hNa-10" target="rRrChRX4YDQylmWt6hNa-14" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="rRrChRX4YDQylmWt6hNa-17" value="Button press info(Notify when pressed &amp;amp; release)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rRrChRX4YDQylmWt6hNa-16" vertex="1" connectable="0">
-          <mxGeometry x="-0.075" y="-1" relative="1" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="rRrChRX4YDQylmWt6hNa-10" value="Button" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;" parent="1" vertex="1">
-          <mxGeometry x="540" y="415" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="rRrChRX4YDQylmWt6hNa-11" value="Button Task" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="555" y="385" width="90" height="30" as="geometry" />
-        </mxCell>
         <mxCell id="rRrChRX4YDQylmWt6hNa-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="rRrChRX4YDQylmWt6hNa-14" target="rRrChRX4YDQylmWt6hNa-18" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -70,11 +50,11 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="rRrChRX4YDQylmWt6hNa-14" value="IMU" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;" parent="1" vertex="1">
-          <mxGeometry x="540" y="555" width="120" height="60" as="geometry" />
+        <mxCell id="rRrChRX4YDQylmWt6hNa-14" value="IMU &amp;amp; Button" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;" parent="1" vertex="1">
+          <mxGeometry x="545" y="510" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="rRrChRX4YDQylmWt6hNa-15" value="IMU Task" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="500" y="525" width="70" height="30" as="geometry" />
+          <mxGeometry x="505" y="480" width="70" height="30" as="geometry" />
         </mxCell>
         <mxCell id="rRrChRX4YDQylmWt6hNa-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" parent="1" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -96,10 +76,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="rRrChRX4YDQylmWt6hNa-18" value="CNN process" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;" parent="1" vertex="1">
-          <mxGeometry x="540" y="660" width="120" height="60" as="geometry" />
+          <mxGeometry x="545" y="615" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="rRrChRX4YDQylmWt6hNa-21" value="CNN Task" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="495" y="630" width="80" height="30" as="geometry" />
+          <mxGeometry x="500" y="585" width="80" height="30" as="geometry" />
         </mxCell>
         <mxCell id="rRrChRX4YDQylmWt6hNa-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" parent="1" source="rRrChRX4YDQylmWt6hNa-26" target="rRrChRX4YDQylmWt6hNa-4" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -110,10 +90,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="rRrChRX4YDQylmWt6hNa-26" value="WIFI module" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;" parent="1" vertex="1">
-          <mxGeometry x="540" y="770" width="120" height="60" as="geometry" />
+          <mxGeometry x="545" y="725" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="rRrChRX4YDQylmWt6hNa-31" value="WIFI Task" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="500" y="740" width="80" height="30" as="geometry" />
+          <mxGeometry x="505" y="695" width="80" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
