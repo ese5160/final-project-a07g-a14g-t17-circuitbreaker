@@ -28,6 +28,10 @@ fingerprint task:
 IMU task:
 ![image](https://github.com/user-attachments/assets/5f39b43e-141e-4592-be7a-0d457f74d0b6)
 
+CNN task:
+![image](https://github.com/user-attachments/assets/d8242546-337f-4930-8fdd-bf75ef7240ae)
+
+
 
 
 # 4 Wiretap the convo!
