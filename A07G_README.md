@@ -24,8 +24,9 @@
 fingerprint task:
 ![image](https://github.com/user-attachments/assets/0c4a5d6b-93f7-4f2d-8fe5-876ee9fe2582)
 
-button task:
-![image](https://github.com/user-attachments/assets/c429bc17-2672-48e6-9817-342c29bdd861)
+IMU task:
+![image](https://github.com/user-attachments/assets/5f39b43e-141e-4592-be7a-0d457f74d0b6)
+
 
 
 # 4 Wiretap the convo!
