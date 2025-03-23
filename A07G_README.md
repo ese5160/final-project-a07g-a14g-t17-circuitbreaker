@@ -19,7 +19,8 @@
 * data buffered in FIFO for ICM-42670-P
 * FREERTOS as RTOS
 # 01.2 Software Architecture(Task)
-![image](https://github.com/user-attachments/assets/1b12936f-92bb-4a88-a012-948c5a556bc9)
+![image](https://github.com/user-attachments/assets/4875c40e-b36e-4253-8593-0263f86790ae)
+
 # 01.3 Software Architecture(State machine for Task)
 fingerprint task:
 ![image](https://github.com/user-attachments/assets/0c4a5d6b-93f7-4f2d-8fe5-876ee9fe2582)
