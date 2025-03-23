@@ -22,3 +22,9 @@
 ![image](https://github.com/user-attachments/assets/a3c7b6cc-9c70-4740-b462-a9390f0c0fd3)
 # 01.3 Software Architecture(State machine for Task)
 
+# 4 Wiretap the convo!
+![image](https://github.com/user-attachments/assets/235812a3-2ba1-4d0c-9064-d293da0789d2)
+![image](https://github.com/user-attachments/assets/1eecf5f9-efb1-440f-91c4-ebb2e226339c)
+
+
+
