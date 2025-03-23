@@ -1,9 +1,37 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0" version="26.1.1">
   <diagram name="第 1 页" id="_QGK-8MzVzmzwNiIo1KS">
-    <mxGraphModel>
+    <mxGraphModel dx="1410" dy="774" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="neTcZEGQh94HZA0nzufA-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="neTcZEGQh94HZA0nzufA-2" target="neTcZEGQh94HZA0nzufA-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="neTcZEGQh94HZA0nzufA-9" value="button presssed" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="neTcZEGQh94HZA0nzufA-8">
+          <mxGeometry x="-0.0643" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="neTcZEGQh94HZA0nzufA-2" value="button released" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="190" y="305" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="neTcZEGQh94HZA0nzufA-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="neTcZEGQh94HZA0nzufA-4" target="neTcZEGQh94HZA0nzufA-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="neTcZEGQh94HZA0nzufA-4" value="start" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="60" y="320" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="neTcZEGQh94HZA0nzufA-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="neTcZEGQh94HZA0nzufA-6" target="neTcZEGQh94HZA0nzufA-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="neTcZEGQh94HZA0nzufA-11" value="button released" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="neTcZEGQh94HZA0nzufA-10">
+          <mxGeometry x="-0.15" y="4" relative="1" as="geometry">
+            <mxPoint x="-21" y="-9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="neTcZEGQh94HZA0nzufA-6" value="button pushed(send message to haptic feedback task and imu task)" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="430" y="290" width="95" height="95" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
