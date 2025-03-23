@@ -27,7 +27,7 @@
 ![image](https://github.com/user-attachments/assets/1eecf5f9-efb1-440f-91c4-ebb2e226339c)
 
 * The net is PB10
-* The setting is Async Serial and rate 115200 bps, 8 bits per frame & 1 stop bit
+* The setting is Async Serial and rate 115200 bps, 8 bits per frame & 1 stop bit, i didn't use any mode, but i guess trigger mode for rising and falling edge are ok
 
 ![image](https://github.com/user-attachments/assets/307641bf-39b7-4de8-a7aa-6c4059e747be)
   I use d0 & d1 for logic analyzer
