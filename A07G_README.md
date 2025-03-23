@@ -26,5 +26,13 @@
 ![image](https://github.com/user-attachments/assets/235812a3-2ba1-4d0c-9064-d293da0789d2)
 ![image](https://github.com/user-attachments/assets/1eecf5f9-efb1-440f-91c4-ebb2e226339c)
 
+* The net is PB10
+* The setting is Async Serial and rate 115200 bps, 8 bits per frame & 1 stop bit
+
+![image](https://github.com/user-attachments/assets/307641bf-39b7-4de8-a7aa-6c4059e747be)
+  I use d0 & d1 for logic analyzer
+
+
+![image](https://github.com/user-attachments/assets/c8236a53-7ac3-45ab-a3ed-b0fcb39c62d0)
 
 
