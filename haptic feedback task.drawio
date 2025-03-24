@@ -1,9 +1,75 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0" version="26.1.1">
   <diagram name="第 1 页" id="bxPTzVBQoIoyR5Ov18DK">
-    <mxGraphModel>
+    <mxGraphModel dx="1410" dy="774" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="ISlwGy7PfBfhD5LfPjgJ-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ISlwGy7PfBfhD5LfPjgJ-1" target="ISlwGy7PfBfhD5LfPjgJ-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ISlwGy7PfBfhD5LfPjgJ-1" value="start" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="70" y="320" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ISlwGy7PfBfhD5LfPjgJ-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="ISlwGy7PfBfhD5LfPjgJ-2" target="ISlwGy7PfBfhD5LfPjgJ-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ISlwGy7PfBfhD5LfPjgJ-6" value="Message from fingerprint" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ISlwGy7PfBfhD5LfPjgJ-5">
+          <mxGeometry x="-0.34" y="-23" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ISlwGy7PfBfhD5LfPjgJ-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ISlwGy7PfBfhD5LfPjgJ-2" target="ISlwGy7PfBfhD5LfPjgJ-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ISlwGy7PfBfhD5LfPjgJ-10" value="from imu task" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ISlwGy7PfBfhD5LfPjgJ-9">
+          <mxGeometry x="-0.2703" y="4" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ISlwGy7PfBfhD5LfPjgJ-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="ISlwGy7PfBfhD5LfPjgJ-2" target="ISlwGy7PfBfhD5LfPjgJ-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ISlwGy7PfBfhD5LfPjgJ-14" value="from wifi task" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ISlwGy7PfBfhD5LfPjgJ-13">
+          <mxGeometry x="-0.2667" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ISlwGy7PfBfhD5LfPjgJ-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="ISlwGy7PfBfhD5LfPjgJ-2" target="ISlwGy7PfBfhD5LfPjgJ-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ISlwGy7PfBfhD5LfPjgJ-2" value="idle" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="220" y="320" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ISlwGy7PfBfhD5LfPjgJ-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="ISlwGy7PfBfhD5LfPjgJ-4" target="ISlwGy7PfBfhD5LfPjgJ-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ISlwGy7PfBfhD5LfPjgJ-4" value="fingerprint(turn on led1 1s and motor vibrate)" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="370" y="180" width="90" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ISlwGy7PfBfhD5LfPjgJ-8" value="Imu(turn on led 2 and motor for 1s)" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="414" y="320" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ISlwGy7PfBfhD5LfPjgJ-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.938;entryY=0.85;entryDx=0;entryDy=0;entryPerimeter=0;curved=1;" edge="1" parent="1" source="ISlwGy7PfBfhD5LfPjgJ-8" target="ISlwGy7PfBfhD5LfPjgJ-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ISlwGy7PfBfhD5LfPjgJ-12" value="WIFI module(turn on led3 for 1s)" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="380" y="480" width="90" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ISlwGy7PfBfhD5LfPjgJ-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.275;entryY=0.988;entryDx=0;entryDy=0;entryPerimeter=0;curved=1;" edge="1" parent="1" source="ISlwGy7PfBfhD5LfPjgJ-12" target="ISlwGy7PfBfhD5LfPjgJ-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ISlwGy7PfBfhD5LfPjgJ-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;curved=1;" edge="1" parent="1" source="ISlwGy7PfBfhD5LfPjgJ-16">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="230" y="330" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="168" y="340" />
+              <mxPoint x="231" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ISlwGy7PfBfhD5LfPjgJ-16" value="failed(turn on led4 for 1s)" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="100" y="160" width="80" height="80" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
