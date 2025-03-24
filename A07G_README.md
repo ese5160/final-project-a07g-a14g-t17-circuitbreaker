@@ -47,6 +47,7 @@ Haptic feedback task:
 fetches the character from cbufTx.
 * ![image](https://github.com/user-attachments/assets/54db3c57-57a8-4e78-a77f-cc902d00899d)
 * ![image](https://github.com/user-attachments/assets/eecdcfad-f557-47cd-b2f7-d08456e5a547)
+* It initializes and starts multiple FreeRTOS tasks, only one thread created vCommandConsoleTask.
 
 
 
