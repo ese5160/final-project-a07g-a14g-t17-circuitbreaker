@@ -1,9 +1,9 @@
 # a07g-exploring-the-CLI
 
-* Team Number:
-* Team Name:
-* Team Members:
-* GitHub Repository URL:
+* Team Number: 17
+* Team Name:Circuit Breaker
+* Team Members:Shuowen Gu & Yuetian Zhao
+* GitHub Repository URL:https://github.com/ese5160/final-project-a07g-a14g-t17-circuitbreaker
 * Description of test hardware: (development boards, sensors, actuators, laptop + OS, etc)
 # 01.1 Software Architecture(HRS & SRS)
 ## HRS
