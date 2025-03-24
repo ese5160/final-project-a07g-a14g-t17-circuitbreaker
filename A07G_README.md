@@ -49,6 +49,8 @@ fetches the character from cbufTx.
 * ![image](https://github.com/user-attachments/assets/eecdcfad-f557-47cd-b2f7-d08456e5a547)
 * It initializes and starts multiple FreeRTOS tasks, only one thread created vCommandConsoleTask.
 
+# 3 Debug Logger Module
+Done
 
 
 # 4 Wiretap the convo!
@@ -65,5 +67,13 @@ fetches the character from cbufTx.
 ![image](https://github.com/user-attachments/assets/c8236a53-7ac3-45ab-a3ed-b0fcb39c62d0)
 
 see capture_uart.sal in Repository 
+
+# 5 Complete the CLI
+Done
+
+# 6 Add CLI commands
+Done 
+
+https://youtu.be/TU_1CTaxab8?si=vMdGJFi94x1qaABw
 
 
