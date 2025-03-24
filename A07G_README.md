@@ -37,6 +37,18 @@ Wifi task:
 Haptic feedback task:
 ![image](https://github.com/user-attachments/assets/8d19b5e0-c525-46f6-95a5-339dc48092f7)
 
+# 2 Understanding the Starter Code
+* InitializeSerialConsole() Initializes the UART and registers callbacks, “cbufRx” and “cbufTx” are circular buffers for RX and TX, they are FIFO.
+* “cbufRx” and “cbufTx” are initialized use circular_buf_init(), which will define buffer address and the size, they are defined in circular_buffer.c/h
+* they are stored in char rxCharacterBuffer[RX_BUFFER_SIZE], char txCharacterBuffer[TX_BUFFER_SIZE], the size is 512 bytes.
+* UART character received and UART character are defined in configure_usart_callbacks().
+* Character Received (RX): usart_read_callback(), Character Sent (TX): usart_write_callback() 
+* RX Callback (usart_read_callback), triggered when a character is received, then stores the received character in cbufRx, starts listening for the next character, and signals a waiting task that data is available. TX Callback (usart_write_callback) do the same and 
+fetches the character from cbufTx.
+* ![image](https://github.com/user-attachments/assets/54db3c57-57a8-4e78-a77f-cc902d00899d)
+* ![image](https://github.com/user-attachments/assets/eecdcfad-f557-47cd-b2f7-d08456e5a547)
+
+
 
 # 4 Wiretap the convo!
 ![image](https://github.com/user-attachments/assets/235812a3-2ba1-4d0c-9064-d293da0789d2)
