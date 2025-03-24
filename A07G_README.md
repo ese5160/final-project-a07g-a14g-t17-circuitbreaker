@@ -51,4 +51,6 @@ Haptic feedback task:
 
 ![image](https://github.com/user-attachments/assets/c8236a53-7ac3-45ab-a3ed-b0fcb39c62d0)
 
+see capture_uart.sal in Repository 
+
 
