@@ -31,8 +31,11 @@ IMU task:
 CNN task:
 ![image](https://github.com/user-attachments/assets/a76cadbf-c52d-444f-a723-d7e20a85b275)
 
+Wifi task:
+![image](https://github.com/user-attachments/assets/3381d91e-1dd1-4846-b5d5-5b31303c159a)
 
-
+Haptic feedback task:
+![image](https://github.com/user-attachments/assets/8d19b5e0-c525-46f6-95a5-339dc48092f7)
 
 
 # 4 Wiretap the convo!
