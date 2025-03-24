@@ -11,11 +11,13 @@
  ******************************************************************************/
 #include "CliThread.h"
 #include "SerialConsole/SerialConsole.h"
+#include "FreeRTOS.h"
+#include "task.h"
 
 /******************************************************************************
  * Defines
  ******************************************************************************/
-
+#define FIRMWARE_VERSION "0.0.1"
 
 /******************************************************************************
  * Variables
@@ -33,20 +35,38 @@ const CLI_Command_Definition_t xClearScreen =
         CLI_CALLBACK_CLEAR_SCREEN,
         CLI_PARAMS_CLEAR_SCREEN};
 
-static const CLI_Command_Definition_t xResetCommand =
-    {
-        "reset",
-        "reset: Resets the device\r\n",
-        (const pdCOMMAND_LINE_CALLBACK)CLI_ResetDevice,
-        0};
-
 /******************************************************************************
  * Forward Declarations
  ******************************************************************************/
 static void FreeRTOS_read(char *character);
+static BaseType_t CLI_Version(int8_t *pcWriteBuffer, size_t xWriteBufferLen, const int8_t *pcCommandString);
+static BaseType_t CLI_Ticks(int8_t *pcWriteBuffer, size_t xWriteBufferLen, const int8_t *pcCommandString);
+
 /******************************************************************************
  * Callback Functions
  ******************************************************************************/
+static const CLI_Command_Definition_t xResetCommand =
+{
+	"reset",
+	"reset: Resets the device\r\n",
+	(const pdCOMMAND_LINE_CALLBACK)CLI_ResetDevice,
+0};
+
+static const CLI_Command_Definition_t xVersionCommand =
+{
+	"version",                                      // Command string
+	"version: Prints the firmware version.\r\n",    // Help string
+	CLI_Version,                                    // Command callback function
+	0                                               // No parameters expected
+};
+
+static const CLI_Command_Definition_t xTicksCommand =
+{
+	"ticks",                                        // Command string
+	"ticks: Prints the number of ticks since the scheduler started.\r\n", // Help string
+	CLI_Ticks,                                      // Command callback function
+	0                                               // No parameters expected
+};
 
 /******************************************************************************
  * CLI Thread
@@ -58,7 +78,9 @@ void vCommandConsoleTask(void *pvParameters)
 
     FreeRTOS_CLIRegisterCommand(&xClearScreen);
     FreeRTOS_CLIRegisterCommand(&xResetCommand);
-
+    FreeRTOS_CLIRegisterCommand(&xVersionCommand);  // Register version command
+    FreeRTOS_CLIRegisterCommand(&xTicksCommand);    // Register ticks command
+	
     uint8_t cRxedChar[2], cInputIndex = 0;
     BaseType_t xMoreDataToFollow;
     /* The input and output buffers are declared static to keep them off the stack. */
@@ -249,5 +271,37 @@ BaseType_t xCliClearTerminalScreen(char *pcWriteBuffer, size_t xWriteBufferLen, 
 BaseType_t CLI_ResetDevice(int8_t *pcWriteBuffer, size_t xWriteBufferLen, const int8_t *pcCommandString)
 {
     system_reset();
+    return pdFALSE;
+}
+
+/**
+ * @brief CLI command to print the firmware version.
+ *
+ * @param pcWriteBuffer Buffer for output string.
+ * @param xWriteBufferLen Length of the output buffer.
+ * @param pcCommandString Pointer to the command string (not used here).
+ * @return BaseType_t pdFALSE as no more output is expected.
+ */
+BaseType_t CLI_Version(int8_t *pcWriteBuffer, size_t xWriteBufferLen, const int8_t *pcCommandString)
+{
+    // Format the version string into the output buffer.
+    snprintf((char *)pcWriteBuffer, xWriteBufferLen, "Firmware version: %s\r\n", FIRMWARE_VERSION);
+    return pdFALSE;
+}
+
+/**
+ * @brief CLI command to print the tick count since the scheduler started.
+ *
+ * @param pcWriteBuffer Buffer for output string.
+ * @param xWriteBufferLen Length of the output buffer.
+ * @param pcCommandString Pointer to the command string (not used here).
+ * @return BaseType_t pdFALSE as no more output is expected.
+ */
+BaseType_t CLI_Ticks(int8_t *pcWriteBuffer, size_t xWriteBufferLen, const int8_t *pcCommandString)
+{
+    // Retrieve the current tick count.
+    TickType_t ticks = xTaskGetTickCount();
+    // Format the tick count into the output buffer.
+    snprintf((char *)pcWriteBuffer, xWriteBufferLen, "Tick count: %u\r\n", (unsigned int)ticks);
     return pdFALSE;
 }
